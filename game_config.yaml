@@ -1,0 +1,84 @@
+---
+Game_config:
+  starging_population: 5
+  game_speed: 1
+Human:
+  maximal_human_age: 80
+  natural_death_chances: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
+  fertility_age: 15
+  fertility_chances: [900, 900, 700, 700, 400, 300, 100, 0, 0, 0]
+  profession: null
+  parents: []
+  siblings: []
+  partner: null
+  efectivity: 1 #how efective is a person
+  learning_skill: 5 # per how many year man increase efectivity
+Industry:
+  Agriculture:
+    group: "Agriculture"
+    product: "Basic food"
+    efectivity: 1
+    stock: 0
+    consumption: []
+    evolution: []
+    people_in_branch: 0
+    cummulative_efectivity: 0
+  Handworking:
+    group: "Handworking"
+    product: "Basic Tools"
+    efectivity: 1
+    stock: 0
+    consumption:
+    -
+      - Agriculture
+      - 3
+    evolution:
+    -
+      - Agriculture
+      - 5
+      - 1000
+    people in branch: 0
+    cummulative_efectivity: 0
+  Vegetable production:
+    group: "Agriculture"
+    product: "Veggies"
+    efectivity: 1
+    stock: 0
+    consumption:
+    -
+      - Handworking
+      - 1
+    evolution:
+    -
+      - Agriculture
+      - 5
+      - 2000
+    -
+      - Handworking
+      - 5
+      - 2000
+    people in branch: 0
+    cummulative_efectivity: 0
+  Meat production:
+    group: "Agriculture"
+    product": "Meat"
+    efectivity: 1
+    stock: 0
+    consumption:
+    -
+      - Handworking
+      - 1
+    -
+      - Agriculture
+      - 2
+    evolution:
+    -
+      - Handworking
+      - 5
+      - 2000
+    -
+      - Agriculture
+      - 6
+      - 5000
+    people in branch: 0
+    cummulative_efectivity: 0
